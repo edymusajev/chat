@@ -2,14 +2,6 @@ import { useEffect, useState } from "react";
 
 const socket = new WebSocket("ws://localhost:8080");
 
-socket.onerror = (error) => {
-  console.error("Error: ", error);
-};
-
-socket.onopen = () => {
-  console.log("Connected to server");
-};
-
 function App() {
   const [messages, setMessages] = useState<string[]>([]);
   const [message, setMessage] = useState("");
@@ -20,12 +12,18 @@ function App() {
   };
 
   useEffect(() => {
+    socket.onerror = (error) => {
+      console.error("Error: ", error);
+    };
+    socket.onopen = () => {
+      console.log("Connected to server");
+    };
     socket.onmessage = (event) => {
       console.log("Received message: ", event.data);
       const messages = JSON.parse(event.data);
       setMessages((prevMessages) => messages);
     };
-  });
+  }, []);
   return (
     <div>
       {messages.map((message) => (

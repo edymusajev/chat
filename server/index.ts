@@ -5,6 +5,7 @@ const websocketServer = new ws.WebSocketServer({ port: 8080 });
 const messages: string[] = [];
 
 websocketServer.on("connection", (websocket) => {
+  websocket.send(JSON.stringify(messages));
   websocket.on("message", (message) => {
     messages.push(message.toString());
 
