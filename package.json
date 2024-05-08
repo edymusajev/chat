@@ -6,7 +6,7 @@
     "@types/bun": "latest"
   },
   "scripts": {
-    "dev": "npx tsc && bun src/server.ts"
+    "dev": "npx tsc && bun --hot run src/server.ts"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
