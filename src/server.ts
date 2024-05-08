@@ -18,22 +18,22 @@ const server = http
     switch (parsedUrl.pathname) {
       case "/":
         res.writeHead(200, { "Content-Type": "text/html" });
-        const indexHtmlFile = await fs.readFile("index.html", "utf-8");
+        const indexHtmlFile = await fs.readFile("src/index.html", "utf-8");
         res.end(indexHtmlFile);
         break;
       case "/room":
         res.writeHead(200, { "Content-Type": "text/html" });
-        const roomHtmlFile = await fs.readFile("room.html", "utf-8");
+        const roomHtmlFile = await fs.readFile("src/room.html", "utf-8");
         res.end(roomHtmlFile);
         break;
       case "/index.ts":
         res.writeHead(200, { "Content-Type": "text/javascript" });
-        const indexJsFile = await fs.readFile("index.ts", "utf-8");
+        const indexJsFile = await fs.readFile("dist/index.js", "utf-8");
         res.end(indexJsFile);
         break;
       case "/room.ts":
         res.writeHead(200, { "Content-Type": "text/javascript" });
-        const roomJsFile = await fs.readFile("room.ts", "utf-8");
+        const roomJsFile = await fs.readFile("dist/room.js", "utf-8");
         res.end(roomJsFile);
         break;
       case "/api/room":
