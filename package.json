@@ -2,11 +2,11 @@
   "name": "chat",
   "module": "index.ts",
   "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
   "scripts": {
     "dev": "npx tsc && bun --hot run src/server.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
