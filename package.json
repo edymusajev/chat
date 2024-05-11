@@ -3,7 +3,8 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "npx tsc && bun --hot run src/server.ts"
+    "dev": "npx tsc && bun --hot run src/server.ts",
+    "start": "bun run src/server.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"

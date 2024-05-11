@@ -21,3 +21,8 @@ TODO
 - chats per room
 - assign random username to users
 - persist chats in db for 24 hours
+
+Saturaday 11 May
+Let's figure out how to make this app accessible from my local machine.
+I'll read Network Warrior this weekend to figure out how to set up a home server.
+Or... let's check deployment on vercel first
